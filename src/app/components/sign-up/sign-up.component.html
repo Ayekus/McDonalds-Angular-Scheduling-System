@@ -1,0 +1,16 @@
+<div class="card-container">
+  <div class="card">
+    <div class="card-body">
+      <h1>Sign Up</h1>
+      <form [formGroup]="signupForm" (ngSubmit)="signupUser()">
+        <input type="text" id="email" placeholder="Email Address" formControlName="email" class="form-control" />
+        <p *ngIf="form['email'].invalid && form['email'].touched">Error in email field</p>
+        <br />
+        <input type="password" id="password" placeholder="Password" formControlName="password" class="form-control" />
+        <p *ngIf="form['password'].invalid && form['password'].touched">Error in password field</p>
+        <br />
+        <button type="submit" class="btn btn-warning">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
